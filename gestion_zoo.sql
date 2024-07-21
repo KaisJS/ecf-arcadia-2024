@@ -1,3 +1,6 @@
+CREATE DATABASE IF NOT EXISTS gestion_zoo;
+USE gestion_zoo;
+
 
 CREATE TABLE `animal` (
   `animal_id` int(11) NOT NULL,
