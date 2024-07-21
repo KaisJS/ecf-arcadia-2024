@@ -4,9 +4,11 @@ Ce guide te montre comment déployer l'application de gestion du zoo en local. L
 
 Prérequis :
 
-XAMPP installé sur ta machine.
-Un éditeur de code (comme Visual Studio Code ou Sublime Text).
-Structure du Projet
+XAMPP installé sur la machine.
+Un éditeur de code comme Visual Studio Code.
+
+Structure du Projet:
+
 Dossier du projet : ecf-arcadia-2024
 Base de données : Le fichier gestion_zoo.sql se trouve dans le dossier du projet.
 
