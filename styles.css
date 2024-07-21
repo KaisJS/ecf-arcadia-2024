@@ -1,0 +1,265 @@
+/* Base Styles */
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0f3a19;
+  color: white;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* Fullscreen Cover Image */
+#home {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url("zoo_image.jpg") no-repeat center center/cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  z-index: 1;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Adding text shadow */
+}
+
+.overlay h1,
+.overlay p {
+  margin: 0;
+  padding: 0 20px;
+}
+
+.overlay p.lead {
+  margin-top: 20px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #0f3a19; /* Darker brown */
+}
+.nav-link {
+  color: #ede0d4; /* Light khaki */
+}
+.nav-link:hover {
+  color: #d4c19c; /* Slightly darker khaki */
+}
+
+/* Centrer les éléments de la navbar */
+.navbar .navbar-nav {
+  margin: 0 auto;
+}
+
+/* Jumbotron */
+.jumbotron {
+  background-color: #ede0d4; /* Light khaki */
+  color: #3b2f2f; /* Darker brown */
+}
+.jumbotron img {
+  max-width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.jumbotron img:hover {
+  transform: scale(1.05);
+}
+
+/* Buttons */
+.btn-success {
+  background-color: #3b2f2f; /* Darker brown */
+  border-color: #3b2f2f; /* Darker brown */
+}
+.btn-success:hover {
+  background-color: #d4c19c; /* Slightly darker khaki */
+  border-color: #d4c19c; /* Slightly darker khaki */
+  color: #3b2f2f; /* Darker brown */
+}
+
+/* Cards */
+.card {
+  border-color: #3b2f2f; /* Darker brown */
+  border-radius: 10px;
+  transition: box-shadow 0.3s;
+}
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card-title,
+.card-text {
+  color: #3b2f2f; /* Darker brown */
+}
+
+/* Form */
+form {
+  background-color: #ede0d4; /* Light khaki */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+label {
+  font-weight: bold;
+}
+input.form-control,
+textarea.form-control {
+  border: 1px solid #3b2f2f; /* Darker brown */
+}
+
+/* Footer */
+footer {
+  background-color: #3b2f2f; /* Darker brown */
+  color: #ede0d4; /* Light khaki */
+  padding: 20px 0;
+}
+footer p {
+  margin: 0;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animation for sections */
+section {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .jumbotron h1 {
+    font-size: 2.5rem;
+  }
+  .jumbotron p,
+  .form-group label {
+    font-size: 1.25rem;
+  }
+  .card-title {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .jumbotron h1 {
+    font-size: 2rem;
+  }
+  .jumbotron p,
+  .form-group label {
+    font-size: 1rem;
+  }
+  .card-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .jumbotron h1 {
+    font-size: 1.75rem;
+  }
+  .jumbotron p,
+  .form-group label {
+    font-size: 0.875rem;
+  }
+  .card-title {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .jumbotron h1 {
+    font-size: 1.5rem;
+  }
+  .jumbotron p,
+  .form-group label {
+    font-size: 0.75rem;
+  }
+  .card-title {
+    font-size: 0.75rem;
+  }
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Additional Styles */
+header,
+footer,
+nav,
+section,
+article,
+aside {
+  padding: 20px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.jumbotron {
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.jumbotron h1,
+.jumbotron p {
+  margin: 0;
+}
+.jumbotron p.lead {
+  margin-top: 20px;
+}
+.card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card-body {
+  padding: 20px;
+}
+.card-title {
+  margin-bottom: 10px;
+}
+.card-text {
+  margin-bottom: 20px;
+}
+h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: white; /* Darker brown */
+  text-align: center;
+  animation: slideIn 1s ease-in-out;
+}
+
+/* Specific for Habitat and Service Sections */
+#habitats-global .card,
+#services-global .card {
+  margin-bottom: 30px;
+}
+#habitats-global h2,
+#services-global h2 {
+  animation: slideIn 1s ease-in-out;
+}
