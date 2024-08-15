@@ -1,41 +1,44 @@
-Déploiement Local de l'Application Zoo ARCADIA 2024
+**Déploiement Local de l'Application Zoo ARCADIA 2024**
 
-Ce guide te montre comment déployer l'application de gestion du zoo en local. L'application est développée en PHP pour le backend et utilise MySQL pour la base de données. Le frontend est construit avec HTML, CSS, JavaScript et Bootstrap.
+Ce guide vous montre comment déployer l'application de gestion du zoo en local. L'application est développée en PHP pour le backend et utilise MySQL pour la base de données. Le frontend est construit avec HTML, CSS, JavaScript et Bootstrap.
 
-Prérequis :
+### Prérequis :
 
-XAMPP installé sur la machine.
-Un éditeur de code comme Visual Studio Code.
+- XAMPP installé sur votre machine.
+- Un éditeur de code comme Visual Studio Code.
 
-Structure du Projet:
+### Structure du Projet:
 
-Dossier du projet : ecf-arcadia-2024
-Base de données : Le fichier gestion_zoo.sql se trouve dans le dossier du projet.
+- **Dossier du projet** : `ecf-arcadia-2024`
+- **Base de données** : Le fichier `gestion_zoo.sql` se trouve dans le dossier du projet.
 
-Installation :
+### Installation :
 
-Télécharger et Installer XAMPP
+#### 1. Télécharger et Installer XAMPP
 
-Télécharge XAMPP depuis le site officiel.
-Suis les instructions d'installation pour configurer XAMPP sur ton système.
-Décompresser le Projet
+- Téléchargez XAMPP depuis le site officiel.
+- Suivez les instructions d'installation pour configurer XAMPP sur votre système.
 
-Décompresse le dossier ecf-arcadia-2024 dans le répertoire htdocs de XAMPP. Le chemin par défaut est généralement C:\xampp\htdocs.
+#### 2. Décompresser le Projet
 
-Configurer la Base de Données :
+- Décompressez le dossier `ecf-arcadia-2024` dans le répertoire `htdocs` de XAMPP. Le chemin par défaut est généralement `C:\xampp\htdocs`.
 
-Ouvre le panneau de contrôle XAMPP et démarre les services Apache et MySQL.
-Accède à phpMyAdmin via ton navigateur.
-Crée une nouvelle base de données en cliquant sur "Bases de données" et nomme-la gestion_zoo.
-Importer le fichier gestion_zoo.sql :
-Dans phpMyAdmin, sélectionne la base de données gestion_zoo.
-Clique sur l'onglet "Importer".
-Sélectionne le fichier gestion_zoo.sql dans le dossier du projet et clique sur "Exécuter".
+#### 3. Configurer la Base de Données :
 
-Configurer le Fichier de Connexion
+- Ouvrez le panneau de contrôle XAMPP et démarrez les services Apache et MySQL.
+- Accédez à phpMyAdmin via votre navigateur.
+- Créez une nouvelle base de données en cliquant sur "Bases de données" et nommez-la `gestion_zoo`.
+  
+##### Importer le fichier `gestion_zoo.sql` :
+  - Dans phpMyAdmin, sélectionnez la base de données `gestion_zoo`.
+  - Cliquez sur l'onglet "Importer".
+  - Sélectionnez le fichier `gestion_zoo.sql` dans le dossier du projet et cliquez sur "Exécuter".
 
-Assure-toi que le fichier de configuration PHP (config/database.php) contient les bonnes informations pour se connecter à la base de données MySQL :
+#### 4. Configurer le Fichier de Connexion
 
+- Assurez-vous que le fichier de configuration PHP (`config/database.php`) contient les bonnes informations pour se connecter à la base de données MySQL :
+
+```php
 <?php
 $servername = "localhost";
 $username = "root"; 
@@ -50,7 +53,8 @@ if ($conn->connect_error) {
     die("La connexion a échoué : " . $conn->connect_error);
 }
 ?>
+```
 
-Accéder à l'Application
+### 5. Accéder à l'Application
 
-Ouvre ton navigateur et accède à http://localhost/ecf-arcadia-2024 pour voir l'application en action.
+- Ouvrez votre navigateur et accédez à [http://localhost/ecf-arcadia-2024](http://localhost/ecf-arcadia-2024) pour voir l'application en action.
